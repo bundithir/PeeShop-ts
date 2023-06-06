@@ -27,7 +27,7 @@ export const fetchUserSignin = createAsyncThunk('user/fetchSignin' ,
                 })
             })
             const user = await response.json()
-            if(user === 'error'){
+            if(user === 'unable to signin'){
                 return null
             }else{
                 return user 
@@ -54,7 +54,7 @@ export const fetchUserSignup = createAsyncThunk('user/fetchSignup' ,
                 })
             })
             const user = await response.json()
-            if(user === 'error'){
+            if(user === 'unable to register'){
                 return null
             }else{
                 return user 
@@ -87,7 +87,18 @@ const userSlice = createSlice({
             state.LoadingUser = false
             state.error = action.payload
         })
-        
+        builder.addCase(fetchUserSignup.pending , (state)=>{
+            state.LoadingUser = true
+        })
+        builder.addCase(fetchUserSignup.fulfilled , (state , action)=>{
+            state.currentUser = action.payload
+            state.LoadingUser = false
+        })
+        builder.addCase(fetchUserSignup.rejected , (state ,action)=>{
+            state.LoadingUser = false
+            state.error = action.payload
+        })
+          
     },
         
   })

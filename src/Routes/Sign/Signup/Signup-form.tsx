@@ -38,8 +38,8 @@ const SignupForm = () =>{
         e.preventDefault()     
         
         const user = await dispatch(fetchUserSignup(data))
-        if(user.payload === 'error'){
-            alert('TRY AGAIN')
+        if(!user.payload){
+            alert('Cannot register.Something wrong')
         }else{
             Navigate('/')
         }

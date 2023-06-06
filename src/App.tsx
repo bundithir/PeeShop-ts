@@ -6,6 +6,7 @@ import { Women } from './Routes/Women/Women'
 import { Kids } from './Routes/Kids/Kids'
 import Signin from './Routes/Sign/Signin/Signin'
 import Signup from './Routes/Sign/Signup/Signup'
+import Checkout from './Routes/Checkout/Checkout'
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/kids/*' element={<Kids/>}/>
         <Route path='/signin' element={<Signin/>}/>
         <Route path='/signup' element={<Signup/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
       </Route>
     </Routes>
   )

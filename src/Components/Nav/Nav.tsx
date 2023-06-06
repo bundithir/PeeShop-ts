@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet , useNavigate } from "react-router-dom"
 import { useState } from "react"
 import { Logo , BurgerIcon ,XIcon ,LoginIcon , LogoutIcon , CartIcon} from './Nav_Icon'
 import { Xicon ,Categary ,SideMenu , BlackScreen} from "./Nav_styles"
@@ -16,10 +16,13 @@ export const Nav = () =>{
     const user = useAppSelector(Selectuser)
     const CartOpen = useAppSelector(SelectcartOpen)
     const dispatch = useAppDispatch()
+    const Navigate = useNavigate()
     const [SideOpen , SetSideOpen] = useState<boolean>(false)
     const handleSideopen = ()=> SetSideOpen(!SideOpen)
-    const handleCartopen = ()=> dispatch(SetCartOpen(!CartOpen))
-    console.log(user)
+    const handleCartopen = ()=> {
+        if(!user) Navigate('/signin')
+        else dispatch(SetCartOpen(!CartOpen))
+    }
     const onclickSideMenu = () =>{
         if(SideOpen) SetSideOpen(false)
     }

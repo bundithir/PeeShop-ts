@@ -36,9 +36,8 @@ const SigninForm = () =>{
     const handleSubmit = async(e : React.ChangeEvent<HTMLFormElement>) =>{   
         e.preventDefault()     
         const user = await dispatch(fetchUserSignin(data))
-        console.log(user)
         if(!user.payload){
-            alert('TRY AGAIN')
+            alert('Cannot sign in.Something wrong')
         }else{
             Navigate('/')
         }
