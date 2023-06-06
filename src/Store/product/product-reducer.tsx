@@ -1,7 +1,7 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit"
 import { URLFetch } from "../../Routes/Men/men-comp/men-shop"
 type ProductsState = {
-    Products : product[] ,
+    Products : product[] | any ,
     LoadingProducts : boolean ,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     error : any

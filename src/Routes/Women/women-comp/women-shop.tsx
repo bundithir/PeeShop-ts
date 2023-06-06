@@ -6,6 +6,8 @@ import { Selectproducts , SelectproductsLoading } from "../../../Store/product/p
 import Spinner_product from "../../../Components/Spinner/spinner-products";
 import ProductCard from "../../../Components/ProductCard/ProductCard";
 import { LayoutShopProduct } from "../../../Components/Shop/shop-style";
+import { product } from "../../../Store/product/product-reducer";
+
 
 export type URLFetch = {
     gender : string,
@@ -34,7 +36,7 @@ const Women_shop = () =>{
                 <p className="text-center pt-[2rem] uppercase font-bold text-4xl">{category}</p>
                     <div className={LayoutShopProduct}>
                         {products &&
-                            products.map((Product) => <ProductCard key={Product.id} product={Product}/>)
+                            products.map((Product : product) => <ProductCard key={Product.id} product={Product}/>)
                         }
                     </div>
             </div>
