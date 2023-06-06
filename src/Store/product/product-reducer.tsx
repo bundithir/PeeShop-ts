@@ -26,7 +26,7 @@ type res = product[] | string
 export const fetchproductsCategory = createAsyncThunk('user/fetchproductsCategory' , 
     async({gender ,category} : URLFetch) => {
         try {
-            const response = await fetch(`http://localhost:1234/${gender}/${category}`)
+            const response = await fetch(`https://peeshop-ts-back.adaptable.app/${gender}/${category}`)
             const products: res = await response.json()
             if(products === 'Refresh'){
                 return null

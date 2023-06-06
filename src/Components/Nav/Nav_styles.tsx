@@ -8,6 +8,6 @@ export const SideMenu : Styles = 'duration-300 md:translate-x-0 flex flex-col md
 
 export const BlackScreen : Styles = 'fixed h-screen w-[100%] top-0 bg-black/60 z-20 md:hidden'
 
-export const ButtonCheckout : Styles = 'uppercase bg-black rounded-lg w-full text-white text-center py-2 font-bold'
+export const ButtonCheckout : Styles = 'uppercase bg-black rounded-lg w-full text-white text-center py-2 font-bold cursor-pointer'
 
 export const Cartdrop : Styles = 'absolute w-[90%] md:w-[300px] transform translate-x-1/2 right-1/2 md:right-0 md:translate-x-0 h-[300px] bg-white border top-[6rem] rounded-lg shadow-lg p-5'

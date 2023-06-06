@@ -16,7 +16,7 @@ const initialState : Userstate = {
 export const fetchUserSignin = createAsyncThunk('user/fetchSignin' , 
     async(DataUser : typeInForm) => {
         try {
-            const response = await fetch('http://localhost:1234/signin' ,{
+            const response = await fetch('https://peeshop-ts-back.adaptable.app/signin' ,{
                 method : 'POST' ,
                 headers : {
                     'content-type' : 'application/json'
@@ -41,7 +41,7 @@ export const fetchUserSignin = createAsyncThunk('user/fetchSignin' ,
 export const fetchUserSignup = createAsyncThunk('user/fetchSignup' , 
     async(DataUser : typeUpForm) => {
         try {
-            const response = await fetch('http://localhost:1234/signup' ,{
+            const response = await fetch('https://peeshop-ts-back.adaptable.app/signup' ,{
                 method : 'POST' ,
                 headers : {
                     'content-type' : 'application/json'
