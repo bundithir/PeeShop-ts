@@ -2,15 +2,7 @@ import Benefit from "../../../Components/Benefit/Benefit"
 import HeroShop from "../../../Components/Hero-shop/Hero-shop"
 import { Link } from "react-router-dom"
 import CategoryCard from "../../../Components/Category/category-card"
-
-type Hero = {
-    title : string,
-    name : string,
-    type : string,
-    price : string,
-    btn : string,
-    bg : string,
-}
+import { Hero } from "../../Men/men-comp/men-default"
 
 const Hero_kids : Hero ={
     title : 'kids',

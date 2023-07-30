@@ -2,16 +2,8 @@ import { Link } from "react-router-dom"
 import Benefit from "../../../Components/Benefit/Benefit"
 import HeroShop from "../../../Components/Hero-shop/Hero-shop"
 import CategoryCard from "../../../Components/Category/category-card"
+import { Hero } from "../../Men/men-comp/men-default"
 
-
-type Hero = {
-    title : string,
-    name : string,
-    type : string,
-    price : string,
-    btn : string,
-    bg : string,
-}
 
 const Hero_women : Hero ={
     title : 'women',

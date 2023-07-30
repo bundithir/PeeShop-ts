@@ -9,10 +9,7 @@ const Noctice = () =>{
         <div className="w-[90%] mx-auto py-[3rem]">
             <p className={Header}>Noctice</p>
             <div>
-                <a href="#" className={notify}>• โปรดระวังการแอบอ้างชื่อ ผ่านทางเว็บไซต์ Line หรือโซเชียลมีเดียต่างๆ รวมทั้ง SMS และ MMS ที่มิใช่ช่องทางการติดต่ออย่างเป็นทางการ</a>
-            </div>
-            <div>
-                <a href="#" className={notify}>• ลูกค้าอาจได้รับสินค้าภายใน 2-5 วัน เนื่องจากมีออเดอร์จำนวนมาก</a>
+                <a href="#" className={notify}>• Please beware of impersonating company name through fake website, line, or social media including SMS and MMS which is not an official communication channel.</a>
             </div>
         </div>
     )

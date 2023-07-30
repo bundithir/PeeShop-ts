@@ -3,7 +3,7 @@ import Benefit from "../../../Components/Benefit/Benefit"
 import HeroShop from "../../../Components/Hero-shop/Hero-shop"
 import CategoryCard from "../../../Components/Category/category-card"
 
-type Hero = {
+export type Hero = {
     title : string,
     name : string,
     type : string,

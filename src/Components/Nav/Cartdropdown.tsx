@@ -4,8 +4,10 @@ import { Items } from '../../Store/cart/cart-reducer'
 import { useAppSelector } from '../../Store/hook'
 import { SelectcartItems } from '../../Store/cart/cart-selector'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const CartItem =({product} : any)=>{
+type ItemsProps = {
+    product : Items
+}
+const CartItem =({product} : ItemsProps)=>{
     const { name , price , quantity ,image} : Items = product
     return(
         <div className="flex gap-[1rem] mb-[1rem]">
@@ -31,7 +33,7 @@ export const Cartdropdown = () =>{
                     ))}
 
                 </div>
-                <div className={ButtonCheckout} onClick={() =>Navigate('/checkout')}>chceck out</div>
+                <button disabled={CartItems.length === 0} className={ButtonCheckout} onClick={() =>Navigate('/summary')}>summary</button>
             </div>
         </div>
     )

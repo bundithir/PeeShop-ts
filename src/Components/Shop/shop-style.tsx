@@ -1,2 +1,3 @@
-type style = string
-export const LayoutShopProduct : style = 'w-[80%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center mx-auto py-[2rem]'
+export const LayoutShopProduct  = 'w-full lg:w-[85%] flex flex-col lg:flex-row gap-6 flex-wrap items-center mx-auto py-[1rem]'
+export const InputNumber = 'w-[85px] rounded border text-center'
+export const InputSearch = 'focus:outline-none w-full'

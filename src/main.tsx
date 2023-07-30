@@ -12,9 +12,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-          <BrowserRouter>
+        <BrowserRouter>
             <App />
-          </BrowserRouter>
+        </BrowserRouter>
       </PersistGate>
     </Provider>
   </React.StrictMode>,

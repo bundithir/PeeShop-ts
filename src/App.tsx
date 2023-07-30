@@ -6,6 +6,8 @@ import { Women } from './Routes/Women/Women'
 import { Kids } from './Routes/Kids/Kids'
 import Signin from './Routes/Sign/Signin/Signin'
 import Signup from './Routes/Sign/Signup/Signup'
+import Summary from './Routes/Summary/Summary'
+import Admin from './Routes/Admin/Admin'
 import Checkout from './Routes/Checkout/Checkout'
 
 const App = () => {
@@ -19,7 +21,9 @@ const App = () => {
         <Route path='/kids/*' element={<Kids/>}/>
         <Route path='/signin' element={<Signin/>}/>
         <Route path='/signup' element={<Signup/>}/>
+        <Route path='/summary' element={<Summary/>}/>
         <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/admin' element={<Admin/>}/>
       </Route>
     </Routes>
   )

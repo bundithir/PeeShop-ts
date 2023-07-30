@@ -1,0 +1,7 @@
+.SuccessButton {
+    background-color: #1677ff !important;
+
+}
+.SuccessButton:hover{
+    background-color: #4096ff !important;
+}

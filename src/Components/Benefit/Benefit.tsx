@@ -15,21 +15,21 @@ const Benefit = () =>{
                     <img src="/images/1000x500.gif" alt="Click & Collect" />
                     <div className="ml-4">
                         <p className={SubHeader}>Click & Collect</p>
-                        <p className="text-sm">ฟรีค่าบรรจุภัณฑ์ เมื่อเลือกบริการ Click & Collect ช้อปออนไลน์ รับสินค้าที่ร้านสาขา</p>
+                        <p className="text-sm">Free packaging fee when you select "Click & Collect", shopping online and pick-up at store.</p>
                     </div>
                 </div>
                 <div className={EvenBox}>
                     <img src="/images/1000x500.gif" alt="Extra sizes"/>
                     <div className="ml-4">
                         <p className={SubHeader}>Extra sizes from XS-3XL</p>
-                        <p className="text-sm">ไซส์พิเศษตั้งแต่ XS - 3XL มากที่สุดบนออนไลน์สโตร์</p>
+                        <p className="text-sm">Find a wide range of sizes at online store, including XS, XXL, 3XL and longer/shorter lengths of pants.</p>
                     </div>
                 </div>
                 <div className={OddBox}>
                     <img src="/images/1000x500.gif" alt="ORDER TO ME"/>
                     <div className="ml-4">
                         <p className={SubHeader}>ORDER TO ME</p>
-                        <p className="text-sm">เราพร้อมช่วยเหลือคุณ หากคุณหาสินค้าที่คุณต้องการที่ร้านสาขาไม่พบ สามารถแจ้งพนักงานให้ช่วยช้อปบนออนไลน์ได้เลย</p>
+                        <p className="text-sm">Find out how to shop all items available in our online store and have them ordered for you</p>
                     </div>
                 </div>
             </div>

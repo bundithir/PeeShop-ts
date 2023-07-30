@@ -1,6 +1,7 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit"
 import { URLFetch } from "../../Routes/Men/men-comp/men-shop"
 type ProductsState = {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     Products : product[] | any ,
     LoadingProducts : boolean ,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,10 +21,10 @@ export type product = {
     category : string ,
     image : string
 }
-type res = product[] | string
+export type res = product[] | string
 
 
-export const fetchproductsCategory = createAsyncThunk('user/fetchproductsCategory' , 
+export const fetchproductsCategory = createAsyncThunk('product/fetchproductsCategory' , 
     async({gender ,category} : URLFetch) => {
         try {
             const response = await fetch(`https://peeshop-ts-back.adaptable.app/${gender}/${category}`)
@@ -57,9 +58,7 @@ const productsSlice = createSlice({
         builder.addCase(fetchproductsCategory.rejected , (state ,action)=>{
             state.LoadingProducts = false
             state.error = action.payload
-        })
-        
-          
+        })          
     },
         
   })

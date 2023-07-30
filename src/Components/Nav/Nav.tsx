@@ -1,6 +1,6 @@
 import { Link, Outlet , useNavigate } from "react-router-dom"
 import { useState } from "react"
-import { Logo , BurgerIcon ,XIcon ,LoginIcon , LogoutIcon , CartIcon} from './Nav_Icon'
+import { Logo , BurgerIcon ,XIcon ,LoginIcon , LogoutIcon , CartIcon, ToolIcon} from './Nav_Icon'
 import { Xicon ,Categary ,SideMenu , BlackScreen} from "./Nav_styles"
 import { Cartdropdown } from "./Cartdropdown"
 import { Footer } from "../Footer/Footer"
@@ -32,13 +32,13 @@ export const Nav = () =>{
     }
     return (
         <div className="min-h-screen z-0">
-            <div className="border-b border-black sticky top-0 z-10 bg-white">
+            <div className=" sticky top-0 z-10 bg-bgcard">
 
             {SideOpen?
             <section className={BlackScreen} onClick={onclickSideMenu}></section>
             :null}
 
-                <nav className="w-[90%] mx-auto flex justify-between py-[1rem] items-center relative">
+                <nav className="w-[90%] mx-auto flex justify-between py-[0.5rem] items-center relative">
                     <div className="flex gap-[2rem] items-center">
 
                         <button className="md:hidden" onClick={handleSideopen}><BurgerIcon/></button>
@@ -59,7 +59,11 @@ export const Nav = () =>{
                         :
                         <Link to='/signin'><LoginIcon/></Link>
                         }
-                        <div onClick={handleCartopen}><CartIcon/></div>
+                        {
+                            user?.status==="admin"?<Link to='/admin'><ToolIcon/></Link>
+                            :
+                            <div onClick={handleCartopen}><CartIcon/></div>
+                        }
                     </div>
                     {CartOpen?<Cartdropdown/>:null}
                 </nav>

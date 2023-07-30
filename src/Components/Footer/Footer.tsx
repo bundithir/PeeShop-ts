@@ -3,7 +3,7 @@ import { IgIcon , TwIcon , GhIcon , FbIcon } from "./Footer_Icon"
 
 export const Footer = () =>{
     return(
-        <div className="bg-sky-900  mt-[5rem] py-[3rem]">
+        <div className="bg-black mt-[5rem] py-[3.5rem]">
             <div className={LayoutFooter}>
 
                 <div>
