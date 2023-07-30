@@ -69,7 +69,7 @@ export default function CheckoutForm() {
     const paymentResult = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: "http://localhost:5173/checkout",
+        return_url: "https://peeshop-ts.netlify.app/checkout",
         payment_method_data : {
           billing_details : {
             name : user.email
