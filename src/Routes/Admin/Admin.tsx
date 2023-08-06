@@ -11,7 +11,7 @@ const Admin = ()=>{
     const Navigate = useNavigate()
     const FetchProductAdmin = async()=> await dispatch(FetchAdminProducts())
     useEffect(()=> {
-        if(user?.status !== 'Admin'){
+        if(user?.status !== 'admin'){
             alert('You are not Admin')
             Navigate('/')
         }
