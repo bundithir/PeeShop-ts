@@ -1,23 +1,20 @@
 import Benefit from "../../../Components/Benefit/Benefit"
-import HeroShop from "../../../Components/Hero-shop/Hero-shop"
+//import HeroShop from "../../../Components/Hero-shop/Hero-shop"
 import { Link } from "react-router-dom"
 import CategoryCard from "../../../Components/Category/category-card"
 import { Hero } from "../../Men/men-comp/men-default"
+import HeroCaro from "../../../Components/Hero-shop/Hero-caro"
 
 const Hero_kids : Hero ={
     title : 'kids',
-    name : 'gloves',
-    type : 'premium cotton',
-    price : '599',
-    btn : 'shop now',
-    bg : 'bg-hero',
+
 }
 
 export const Kids_default = () =>{
-    const {title , name , type , price , btn ,bg} = Hero_kids
+    const {title } = Hero_kids
     return (
         <div>
-            <HeroShop title={title} name={name}  type={type} price={price}  btn={btn} bg={bg}/>
+            <HeroCaro title={title} />
             <p className="text-center font-bold text-4xl my-[2rem] uppercase">SEARCH BY CATEGORY</p>
             <div className="w-[90%] mx-auto grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-[1rem] md:gap-[2rem]">
                 <Link to='/kids/t-shirt'><CategoryCard img={'./images/500x500.gif'} title={'t-shirt'}/></Link>
